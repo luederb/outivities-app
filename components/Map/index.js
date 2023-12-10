@@ -6,10 +6,10 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import "leaflet-defaulticon-compatibility";
 import CurrentOutivityMarker from "./CurrentOutivityMarker";
 import Link from "next/link";
-import useLocalStorage from "use-local-storage";
+import useLocalStorageState from "use-local-storage-state";
 
 export default function Map({ currentOutivity = {}, outivities }) {
-  const [userPosition, setUserPosition] = useLocalStorage("userPosition", {
+  const [userPosition, setUserPosition] = useLocalStorageState("userPosition", {
     lat: "",
     lng: "",
   });
